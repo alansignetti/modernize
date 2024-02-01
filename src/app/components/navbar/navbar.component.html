@@ -1,0 +1,96 @@
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <div class="sidenav-content">
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="dashboardIcon"></div>
+        <span class="sidenav-label">Dashboard</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="ordersIcon"></div>
+        <span class="sidenav-label">Orders</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="productsIcon"></div>
+        <span class="sidenav-label">Products</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="categoriesIcon"></div>
+        <span class="sidenav-label">Categories</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="customersIcon"></div>
+        <span class="sidenav-label">Customers</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="reportsIcon"></div>
+        <span class="sidenav-label">Reports</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="couponsIcon"></div>
+        <span class="sidenav-label">Coupons</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="inboxIcon"></div>
+        <span class="sidenav-label">Inbox</span>
+      </div>
+
+      <div class="separate-section">Other information</div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="knowledgeIcon"></div>
+        <span class="sidenav-label">Knowledge Base</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="updatesIcon"></div>
+        <span class="sidenav-label">Product Updates</span>
+      </div>
+
+      <div class="separate-section">Settings</div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="personalSettingsIcon"></div>
+        <span class="sidenav-label">Personal Settings</span>
+      </div>
+
+      <div class="sidenav-section" tabindex="0">
+        <div class="icon" [innerHTML]="globalSettingsIcon"></div>
+        <span class="sidenav-label">Global Settings</span>
+      </div>
+    </div>
+  </mat-sidenav>
+
+
+</mat-sidenav-container> -->
+<!-- <mat-sidenav-content> -->
+<!-- Contenido principal de la aplicación -->
+<!-- Aquí deberías colocar el contenido principal de tu aplicación -->
+<!-- </mat-sidenav-content> -->
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <div class="sidenav-content">
+      <div
+        *ngFor="let section of sidenavSections"
+        class="sidenav-section"
+        [ngClass]="{ 'separate-section': section.separate }"
+        tabindex="0"
+      >
+        <div class="icon" [innerHTML]="section.icon"></div>
+        <span
+          [ngClass]="{ 'separate-label': section.separate }"
+          class="sidenav-label"
+          >{{ section.label }}
+        </span>
+      </div>
+    </div>
+  </mat-sidenav>
+  <!-- Contenido principal de la aplicación -->
+</mat-sidenav-container>

@@ -1,0 +1,58 @@
+$grey: #5a607f;
+
+mat-toolbar {
+  padding-right: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  height: 68px;
+}
+
+.logo {
+  width: 20%;
+  min-width: fit-content;
+}
+
+.logo img {
+  width: fit-content;
+}
+
+.custom-search {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  color: #5a607f;
+  background-color: #fff;
+}
+
+.input-search {
+  margin-left: 5px;
+  border: none;
+  outline: none;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  color: $grey;
+}
+
+.user-profile .avatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-left: 20px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Estilo para el nombre de usuario */
+.user-profile .user-name {
+  font-size: 14px; /* Ajusta según tu diseño */
+  color: $grey;
+  font-weight: 400;
+}

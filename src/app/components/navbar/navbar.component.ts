@@ -3,6 +3,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIcon } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { SettingsComponent } from '../settings/settings.component';
+import { MatBadgeModule } from '@angular/material/badge';
 import {
   ordersIcon,
   dashboardIcon,
@@ -21,7 +23,7 @@ import {
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [MatSidenavModule, MatIcon, CommonModule],
+  imports: [MatSidenavModule, MatIcon, CommonModule, MatBadgeModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
@@ -39,6 +41,8 @@ export class NavbarComponent implements OnInit {
   updatesIcon: SafeHtml;
   personalSettingsIcon: SafeHtml;
   globalSettingsIcon: SafeHtml;
+  settingsComponent = SettingsComponent;
+  currentComponent: any;
 
   constructor(private sanitizer: DomSanitizer) {
     this.ordersIcon = this.sanitizeSvg(ordersIcon);
@@ -56,21 +60,36 @@ export class NavbarComponent implements OnInit {
   }
   public ngOnInit(): void {
     this.sidenavSections = [
-      { icon: this.dashboardIcon, label: 'Dashboard' },
-      { icon: this.ordersIcon, label: 'Orders' },
-      { icon: this.productsIcon, label: 'Products' },
-      { icon: this.categoriesIcon, label: 'Categories' },
-      { icon: this.customersIcon, label: 'Customers' },
-      { icon: this.reportsIcon, label: 'Reports' },
-      { icon: this.couponsIcon, label: 'Coupons' },
-      { icon: this.inboxIcon, label: 'Inbox' },
+      { icon: this.dashboardIcon, label: 'Dashboard', quantity: 0 },
+      { icon: this.ordersIcon, label: 'Orders', quantity: 16 },
+      { icon: this.productsIcon, label: 'Products', quantity: 0 },
+      { icon: this.categoriesIcon, label: 'Categories', quantity: 0 },
+      { icon: this.customersIcon, label: 'Customers', quantity: 0 },
+      { icon: this.reportsIcon, label: 'Reports', quantity: 0 },
+      { icon: this.couponsIcon, label: 'Coupons', quantity: 0 },
+      { icon: this.inboxIcon, label: 'Inbox', quantity: 0 },
       { label: 'Other information', separate: true },
-      { icon: this.knowledgeIcon, label: 'Knowledge Base' },
-      { icon: this.updatesIcon, label: 'Product Updates' },
+      { icon: this.knowledgeIcon, label: 'Knowledge Base', quantity: 0 },
+      { icon: this.updatesIcon, label: 'Product Updates', quantity: 0 },
       { label: 'Settings', separate: true },
-      { icon: this.personalSettingsIcon, label: 'Personal Settings' },
-      { icon: this.globalSettingsIcon, label: 'Global Settings' },
+      {
+        icon: this.personalSettingsIcon,
+        label: 'Personal Settings',
+        quantity: 0,
+      },
+      { icon: this.globalSettingsIcon, label: 'Global Settings', quantity: 0 },
     ];
+  }
+
+  onSectionClick(section: any): void {
+    switch (section.label) {
+      case 'Personal Settings':
+        this.currentComponent = this.settingsComponent;
+        break;
+      default:
+        this.currentComponent = null;
+        break;
+    }
   }
 
   sanitizeSvg(svgString: string): SafeHtml {

@@ -10,6 +10,11 @@ mat-toolbar {
   z-index: 20;
 }
 
+.header-container {
+  display: flex;
+  width: 100%;
+}
+
 .logo {
   width: 20%;
   min-width: 300px;
@@ -56,9 +61,36 @@ mat-toolbar {
   align-items: flex-end;
 }
 
-/* Estilo para el nombre de usuario */
 .user-profile .user-name {
-  font-size: 14px; /* Ajusta según tu diseño */
+  font-size: 14px;
   color: $grey;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  mat-toolbar {
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 0;
+    padding-left: 5px;
+  }
+
+  .logo {
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    min-width: 160px;
+    flex-direction: column;
+  }
+  .custom-search {
+    width: 25%;
+  }
+  .input-search {
+    width: 100%;
+  }
+
+  .user-profile .avatar {
+    margin-left: 5px;
+  }
 }

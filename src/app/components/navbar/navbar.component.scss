@@ -13,6 +13,20 @@
   padding-left: 15px;
 }
 
+.custom-badge {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 20px 20px 20px 20px;
+}
+
 .sidenav-section {
   display: flex;
   align-items: center;
@@ -38,6 +52,7 @@
 .sidenav-label {
   font-size: 14px;
   margin-left: 15px;
+  width: 60%;
 }
 
 .separate-label {
@@ -70,4 +85,28 @@
   color: #a1a7c4;
   background-color: transparent;
   cursor: default;
+}
+
+mat-sidenav-content {
+  background-color: #f5f6fa;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidenav {
+    width: 150px;
+  }
+  .sidenav-content {
+    padding-left: 0px;
+  }
+  .sidenav-section {
+    width: 80%;
+  }
+  .sidenav-label {
+    font-size: 10px;
+  }
+
+  .separate-label {
+    margin-left: 0px;
+    font-size: 9px;
+  }
 }

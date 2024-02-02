@@ -1,49 +1,42 @@
 <mat-toolbar>
-  <!-- Sección del logo a la izquierda -->
-  <div class="logo">
-    <!-- Puedes agregar aquí tu logo -->
+  <div class="logo" id="logo">
     <img src="../../../assets/img/logo.png" alt="Logo" />
   </div>
 
-  <!-- Espaciador para centrar la sección de búsqueda -->
-
-  <div class="custom-search">
-    <div class="icon" [innerHTML]="searchIcon"></div>
-    <input
-      class="input-search"
-      type="text"
-      matInput
-      placeholder="Search..."
-      name="search"
-    />
-  </div>
-
-  <!-- Sección de iconos a la derecha -->
-  <div class="icons-container">
-    <div class="icons">
-      <!-- Icono de chat -->
-      <button mat-icon-button>
-        <div class="icon" [innerHTML]="chatIcon"></div>
-      </button>
-
-      <!-- Icono de notificaciones -->
-      <button mat-icon-button class="icon-button">
-        <div class="badge" matBadge="8" matBadgeSize="small">
-          <div class="icon" [innerHTML]="notificationIcon"></div>
-        </div>
-      </button>
+  <div class="header-container">
+    <div class="custom-search">
+      <div class="icon" [innerHTML]="searchIcon"></div>
+      <input
+        class="input-search"
+        type="text"
+        matInput
+        placeholder="Search..."
+        name="search"
+      />
     </div>
-    <!-- Logo de avatar y nombre -->
-    <div class="user-profile">
-      <img src="../../../assets/img/Bitmap.png" alt="Avatar" class="avatar" />
-      <div class="user-info">
-        <span class="user-name">X’eriya Ponald</span>
+
+    <div class="icons-container">
+      <div class="icons">
+        <button mat-icon-button>
+          <div class="icon" [innerHTML]="chatIcon"></div>
+        </button>
+        <button mat-icon-button>
+          <div class="badge" matBadge="8" matBadgeSize="small">
+            <div class="icon" [innerHTML]="notificationIcon"></div>
+          </div>
+        </button>
       </div>
-    </div>
 
-    <!-- Flecha de dropdown hacia abajo -->
-    <button mat-icon-button>
-      <mat-icon>keyboard_arrow_down</mat-icon>
-    </button>
+      <div class="user-profile">
+        <img src="../../../assets/img/Bitmap.png" alt="Avatar" class="avatar" />
+        <div class="user-info">
+          <span class="user-name">X’eriya Ponald</span>
+        </div>
+      </div>
+
+      <button mat-icon-button>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
   </div>
 </mat-toolbar>

@@ -51,6 +51,27 @@
             <h3>Regional Settings</h3>
             <p class="text-grey">Set your language and timezone</p>
           </div>
+
+          <div class="select-form">
+            <div class="input-pair">
+              <label for="language" class="text-grey">Language</label>
+              <select id="language">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+              </select>
+            </div>
+
+            <div class="input-pair">
+              <label for="timezone" class="text-grey">Timezone</label>
+              <select id="timezone">
+                <option value="gmt-02">GMT +02:00</option>
+                <option value="utc-0">UTC+0</option>
+                <option value="utc-1">UTC+1</option>
+                <option value="utc-2">UTC+2</option>
+              </select>
+            </div>
+          </div>
         </mat-tab>
         <mat-tab labelClass="navigation-tab" label="Notifications"
           >Notifications Content</mat-tab
@@ -62,27 +83,6 @@
           >Security Content</mat-tab
         >
       </mat-tab-group>
-
-      <div class="select-form">
-        <div class="input-pair">
-          <label for="language" class="text-grey">Language</label>
-          <select id="language">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-          </select>
-        </div>
-
-        <div class="input-pair">
-          <label for="timezone" class="text-grey">Timezone</label>
-          <select id="timezone">
-            <option value="gmt-02">GMT +02:00</option>
-            <option value="utc-0">UTC+0</option>
-            <option value="utc-1">UTC+1</option>
-            <option value="utc-2">UTC+2</option>
-          </select>
-        </div>
-      </div>
     </div>
   </div>
   <div class="separator-select"></div>

@@ -14,6 +14,12 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "outputPath": "dist/modernize"
+          }
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
@@ -43,15 +49,16 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/modernize/",
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "650kb",
                   "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "3kb",
                   "maximumError": "4kb"
                 }
               ],

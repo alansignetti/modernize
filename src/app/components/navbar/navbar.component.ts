@@ -59,6 +59,7 @@ export class NavbarComponent implements OnInit {
     this.globalSettingsIcon = this.sanitizeSvg(globalSettingsIcon);
   }
   public ngOnInit(): void {
+    this.currentComponent = this.settingsComponent;
     this.sidenavSections = [
       { icon: this.dashboardIcon, label: 'Dashboard', quantity: 0 },
       { icon: this.ordersIcon, label: 'Orders', quantity: 16 },

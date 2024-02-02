@@ -100,6 +100,7 @@ mat-sidenav-content {
   }
   .sidenav-section {
     width: 80%;
+    height: 30px;
   }
   .sidenav-label {
     font-size: 10px;
@@ -108,5 +109,11 @@ mat-sidenav-content {
   .separate-label {
     margin-left: 0px;
     font-size: 9px;
+  }
+
+  .custom-badge {
+    width: 20px;
+    height: 12px;
+    font-size: 10px;
   }
 }

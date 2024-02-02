@@ -9,15 +9,21 @@ mat-toolbar {
   position: relative;
   z-index: 20;
 }
+.mat-badge-small.mat-badge-overlap.mat-badge-after .mat-badge-content {
+  right: -3px;
+  top: -3px;
+  background: #1e5eff;
+}
 
 .header-container {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .logo {
   width: 20%;
-  min-width: 300px;
+  min-width: 265px;
 }
 
 .logo img {

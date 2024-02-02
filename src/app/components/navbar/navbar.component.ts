@@ -4,6 +4,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIcon } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { SettingsComponent } from '../settings/settings.component';
+import { EmptyMessageComponent } from '../empty-message/empty-message.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import {
   ordersIcon,
@@ -42,6 +43,7 @@ export class NavbarComponent implements OnInit {
   personalSettingsIcon: SafeHtml;
   globalSettingsIcon: SafeHtml;
   settingsComponent = SettingsComponent;
+  emptyMessageComponent = EmptyMessageComponent;
   currentComponent: any;
 
   constructor(private sanitizer: DomSanitizer) {
@@ -88,7 +90,7 @@ export class NavbarComponent implements OnInit {
         this.currentComponent = this.settingsComponent;
         break;
       default:
-        this.currentComponent = null;
+        this.currentComponent = this.emptyMessageComponent;
         break;
     }
   }

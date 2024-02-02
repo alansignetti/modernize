@@ -8,7 +8,7 @@
   </div>
   <div class="settings-container">
     <div class="card-container">
-      <mat-tab-group class="navigation-container" animationDuration="20ms">
+      <mat-tab-group class="navigation-container" animationDuration="200ms">
         <mat-tab labelClass="navigation-tab" label="Profile">
           <div class="profile-details">
             <h3>Profile Details</h3>
@@ -73,15 +73,15 @@
             </div>
           </div>
         </mat-tab>
-        <mat-tab labelClass="navigation-tab" label="Notifications"
-          >Notifications Content</mat-tab
-        >
-        <mat-tab labelClass="navigation-tab" label="Account"
-          >Account Content</mat-tab
-        >
-        <mat-tab labelClass="navigation-tab" label="Security"
-          >Security Content</mat-tab
-        >
+        <mat-tab labelClass="navigation-tab" label="Notifications">
+          <app-empty-message></app-empty-message>
+        </mat-tab>
+        <mat-tab labelClass="navigation-tab" label="Account">
+          <app-empty-message></app-empty-message>
+        </mat-tab>
+        <mat-tab labelClass="navigation-tab" label="Security">
+          <app-empty-message></app-empty-message>
+        </mat-tab>
       </mat-tab-group>
     </div>
   </div>

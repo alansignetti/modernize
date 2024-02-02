@@ -1,0 +1,42 @@
+.empty-container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.empty-image {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.empty-message {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.empty-description {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.portfolio-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1e5eff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: "Inter";
+  font-weight: 300;
+}
+
+.portfolio-link:hover {
+  background-color: #0f4de8;
+}
